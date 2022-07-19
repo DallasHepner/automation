@@ -42,10 +42,9 @@ describe('3 movie test', async () => {
         await driver.sleep(2000)
         await driver.findElement(By.xpath('//form/button')).click()
         await driver.sleep(2000)
-        await driver.findElement(By.xpath('//ul/li/span')).click()
-        await driver.sleep(2000)
-        
-        expect(await driver.findElement(By.id('message')).isDisplayed()).toEqual(true)
+        await driver.findElement(By.xpath('//ul/li/button')).click()
+                
+        await driver.findElement(By.xpath('//*[text()="Shrek deleted!"]'))
     })
 
 })
